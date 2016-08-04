@@ -1,0 +1,17 @@
+<div class="container" ng-controller="MainController as login">
+  <div class="row">
+      <div class="col-sm-4 sol-md-4 col-md-offset-4">
+        <form class="form-signin" method="post" ng-submit="login.doLogin()">
+          <h2 class="form-signin-heading">Please sign in</h2>
+
+          <label for="inputLogin" class="sr-only">Email address</label>
+          <input id="inputLogin" class="form-control" type="text" name="username" ng-model="login.loginData.username" placeholder="Username" required autofocus/>
+
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input class="form-control" type="password" name="password" ng-model="login.loginData.password" placeholder="Password" required/>
+          <br/>
+          <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+        </form>
+      </div>
+    </div>
+</div>
