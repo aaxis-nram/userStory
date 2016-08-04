@@ -1,3 +1,0 @@
-# userStory
-User Story App
-
