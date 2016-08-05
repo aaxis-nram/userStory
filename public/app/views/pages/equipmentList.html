@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>List of Equipment</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Type</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Serial</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Assigned to</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="eq in equipment.equipmentList">
+            <td><a href="/equipmentDetail/{{eq.tagNumber}}">{{eq.tagNumber}}</a></td>
+            <td>{{eq.etype}}</td>
+            <td>{{eq.make}}</td>
+            <td>{{eq.model}}</td>
+            <td>{{eq.serial}}</td>
+            <td>{{eq.purchaseDate | date:'yyyy MMM'}}</td>
+            <td>{{eq.status}}</td>
+            <td>{{eq.assignedTo}}</td>
+            <td>{{eq.description}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

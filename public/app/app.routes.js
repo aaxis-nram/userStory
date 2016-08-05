@@ -23,6 +23,23 @@ angular.module('appRoutes', ['ngRoute'])
         }
       }
     })
+    .when('/test', {
+      templateUrl:'app/views/pages/test.html'
+    })
+    .when('/equipmentList', {
+      templateUrl: 'app/views/pages/equipmentList.html',
+      controller: 'EquipmentController',
+      controllerAs: 'equipment',
+
+    })
+    .when('/createEquipment', {
+      templateUrl: 'app/views/pages/createEquipment.html'
+    })
+    .when('/equipmentDetail/:tagNumber', {
+      templateUrl: 'app/views/pages/equipmentDetail.html',
+      controller: 'EquipmentEditController',
+      controllerAs: 'equipmentDetail'
+    })
 
   $locationProvider.html5Mode(true);
 });

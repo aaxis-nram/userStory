@@ -12,7 +12,7 @@ angular.module('storyService',[])
   storyFactory.create = function(storyData) {
     console.log("In Story Service :: Create");
     console.log(storyData);
-    var ret = $http.post('/api', storyData);
+    var ret = $http.post('/api/story', storyData);
     console.log(ret);
 
     return ret;
@@ -21,7 +21,7 @@ angular.module('storyService',[])
   storyFactory.getStory = function() {
     console.log("In Story Service :: Get");
 
-    return $http.get('/api');
+    return $http.get('/api/story');
   }
 
 

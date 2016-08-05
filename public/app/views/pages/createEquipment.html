@@ -1,0 +1,86 @@
+<div class="container" ng-if="main.loggedIn">
+
+  <div class="col-md-1">
+
+  </div>
+  <h2>Register Equipment</h2>
+
+  <div class="col-xs-8" ng-controller="EquipmentCreateController as equipmentCreate">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form ng-submit="equipmentCreate.createEquipment()">
+
+            <div class="form-group row">
+              <label for="etype" class="col-xs-3 col-form-label">Type</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="etype" ng-model="equipmentCreate.equipmentData.etype" placeholder="Type ..." required/>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Make</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="make" ng-model="equipmentCreate.equipmentData.make" placeholder="Make ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Model</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="model" ng-model="equipmentCreate.equipmentData.model" placeholder="Model ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Serial</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="serial" ng-model="equipmentCreate.equipmentData.serial" placeholder="Serial ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Tag Number</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="tagNumber" ng-model="equipmentCreate.equipmentData.tagNumber" placeholder="Tag Number ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Purchase Date</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="purchaseDate" ng-model="equipmentCreate.equipmentData.purchaseDate" placeholder="Purchase Date ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Purchase Location</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="purchaseLocation" ng-model="equipmentCreate.equipmentData.purchaseLocation" placeholder="Purchase Location ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Purchase Price USD</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="purchasePriceUSD" ng-model="equipmentCreate.equipmentData.purchasePriceUSD" placeholder="Purchase Price in USD ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Status</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="status" ng-model="equipmentCreate.equipmentData.status" placeholder="Status ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="example-text-input" class="col-xs-3 col-form-label">Description</label>
+              <div class="col-xs-9">
+                <input class="form-control input-md" type="text" name="description" ng-model="equipmentCreate.equipmentData.description" placeholder="Description ..." required/>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xs-12">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

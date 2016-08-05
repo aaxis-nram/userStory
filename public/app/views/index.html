@@ -15,11 +15,13 @@
   <script type="text/javascript" src="app/services/authService.js"></script>
   <script type="text/javascript" src="app/services/userService.js"></script>
   <script type="text/javascript" src="app/services/storyService.js"></script>
+  <script type="text/javascript" src="app/services/equipmentService.js"></script>
 
   <!-- Controllers -->
   <script type="text/javascript" src="app/controllers/mainCtrl.js"></script>
   <script type="text/javascript" src="app/controllers/userCtrl.js"></script>
   <script type="text/javascript" src="app/controllers/storyCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/equipmentCtrl.js"></script>
 
   <!-- Directives -->
   <script type="text/javascript" src="app/directives/reverse.js"></script>
@@ -47,9 +49,12 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li ng-if="!main.loggedIn"><a href="/login">Login</a></li>
-        <li ng-if="!main.loggedIn"><a href="/signup">Signup</a></li>
-        <li ng-if="main.loggedIn"><a href="#">Hello {{ main.user.name }}</a></li>
+        <!--li ng-if="!main.loggedIn"><a href="/signup">Signup</a></li-->
+
+        <li ng-if="main.loggedIn"><a href="/createEquipment">Register Equipment</a></li>
+        <li ng-if="main.loggedIn"><a href="/equipmentList">List Equipment</a></li>
         <li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout</a></li>
+        <li ng-if="main.loggedIn"><a href="#">Hello {{ main.user.name }}</a></li>
       </ul>
     </div>
   </div>
